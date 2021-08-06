@@ -1,6 +1,6 @@
 {
   "name": "excalibur-bootstraps",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "A collection of helpers for making games with Excalibur.js",
   "main": "lib/index.js",
   "scripts": {
