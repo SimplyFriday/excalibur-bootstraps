@@ -1,18 +1,18 @@
 {
   "name": "excalibur-bootstraps",
-  "version": "1.0.0",
+  "version": "0.1.2",
   "description": "A collection of helpers for making games with Excalibur.js",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc",
+    "test": "echo \"Error: no test specified\"; exit 1",
+    "build": "tsc -d",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
     "prepare" : "npm run build",
     "prepublishOnly" : "npm run lint",
     "preversion" : "npm run lint",
-    "version" : "npm run format && git add -A src",
-    "postversion" : "git push && git push --tags"
+    "version" : "npm run format; git add -A src",
+    "postversion" : "git push; git push --tags"
   },
   "author": "Josh Greenlaw",
   "license": "MIT",
