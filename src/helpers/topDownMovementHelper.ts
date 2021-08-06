@@ -3,10 +3,10 @@ import { Keys } from 'excalibur/dist/Input';
 
 export class TopDownMovementHelper {
   private _pc: Actor;
-  private _upKeys: Keys[];
-  private _downKeys: Keys[];
-  private _leftKeys: Keys[];
-  private _rightKeys: Keys[];
+  private _upKeys: Keys[] = [];
+  private _downKeys: Keys[] = [];
+  private _leftKeys: Keys[] = [];
+  private _rightKeys: Keys[] = [];
 
   public baseSpeed;
 
@@ -23,10 +23,10 @@ export class TopDownMovementHelper {
     this._pc = pc;
     this.baseSpeed = baseSpeed;
 
-    this._upKeys = upKeys = [];
-    this._downKeys = downKeys = [];
-    this._leftKeys = leftKeys = [];
-    this._rightKeys = rightKeys = [];
+    this._upKeys = upKeys;
+    this._downKeys = downKeys;
+    this._leftKeys = leftKeys;
+    this._rightKeys = rightKeys;
   }
 
   /**

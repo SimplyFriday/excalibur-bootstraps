@@ -1,3 +1,1 @@
-import { TopDownMovementHelper } from './helpers/topDownMovementHelper';
-
-export { TopDownMovementHelper };
+export * from './helpers/topDownMovementHelper';
