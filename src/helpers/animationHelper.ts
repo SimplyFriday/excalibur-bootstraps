@@ -3,19 +3,19 @@ import { HelperGlobals } from "./helperGlobals";
 
 export abstract class AnimationHelper {
     public static getScaledAnimation (engine:Engine, spritesheet:SpriteSheet, startIndex:number, endIndex:number, scaleFactor:number = 1, speed:number = 100): Animation {
-        let a:Animation = spritesheet.getAnimationBetween(engine, startIndex, endIndex, speed);
+        const a:Animation = spritesheet.getAnimationBetween(engine, startIndex, endIndex, speed);
         
-        let scaleX = HelperGlobals.tileHeight / a.width * scaleFactor;
-        let scaleY = HelperGlobals.tileHeight / a.height * scaleFactor;
+        const scaleX = HelperGlobals.tileHeight / a.width * scaleFactor;
+        const scaleY = HelperGlobals.tileHeight / a.height * scaleFactor;
         a.scale = vec(scaleX, scaleY);
 
         return a;
     }
 
     public static getScaledSprite (sprite:Sprite, scaleFactor:number = 1): Sprite {
-        let scaleX = HelperGlobals.tileHeight / sprite.width * scaleFactor;
-        let scaleY = HelperGlobals.tileHeight / sprite.height * scaleFactor;
-        let nSpr = sprite.clone();
+        const scaleX = HelperGlobals.tileHeight / sprite.width * scaleFactor;
+        const scaleY = HelperGlobals.tileHeight / sprite.height * scaleFactor;
+        const nSpr = sprite.clone();
         nSpr.scale = vec(scaleX, scaleY);
 
         return nSpr;
